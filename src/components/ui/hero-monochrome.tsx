@@ -321,16 +321,8 @@ function HeroMonochromeLaunch() {
         style={{ backgroundColor: palette.background.color }}
       />
       <div
-        className="pointer-events-none absolute inset-0 -z-10"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-80"
         style={{ backgroundImage: palette.background.dots, backgroundSize: "12px 12px" }}
-      />
-      <div
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          background: theme === "dark"
-            ? "radial-gradient(ellipse 90% 70% at 50% -10%, rgba(99,102,241,0.35), transparent 65%), radial-gradient(ellipse 60% 50% at 85% 90%, rgba(168,85,247,0.25), transparent 65%)"
-            : "radial-gradient(ellipse 90% 70% at 50% -10%, rgba(99,102,241,0.12), transparent 65%), radial-gradient(ellipse 60% 50% at 85% 90%, rgba(168,85,247,0.08), transparent 65%)"
-        }}
       />
 
       <section
@@ -339,6 +331,13 @@ function HeroMonochromeLaunch() {
           visible ? "motion-safe:animate-[hero1-intro_1s_cubic-bezier(.25,.9,.3,1)_forwards]" : "opacity-0"
         }`}
       >
+        <DitherShader
+          className="absolute inset-0"
+          style={{ zIndex: 0 }}
+          variant="circle" pixelSize={3} patternDensity={2} speed={0.1}
+          enableRipples={false} enableGradient={true}
+          gradientColor1="#FF0000" gradientColor2="#0810FF" opacity={1}
+        />
         <svg
           className="pointer-events-none absolute inset-0 h-full w-full"
           style={{ zIndex: 20 }}
