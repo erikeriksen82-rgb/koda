@@ -327,7 +327,7 @@ function HeroMonochromeLaunch() {
 
       <section
         ref={sectionRef}
-        className={`relative mx-auto flex w-full max-w-6xl flex-col gap-14 overflow-hidden px-6 py-32 transition-opacity duration-700 md:gap-16 lg:px-12 ${
+        className={`relative mx-auto flex w-full max-w-6xl flex-col gap-14 px-6 py-32 transition-opacity duration-700 md:gap-16 lg:px-12 ${
           visible ? "motion-safe:animate-[hero1-intro_1s_cubic-bezier(.25,.9,.3,1)_forwards]" : "opacity-0"
         }`}
       >
