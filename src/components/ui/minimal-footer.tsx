@@ -1,10 +1,4 @@
-import {
-  FacebookIcon,
-  GithubIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  TwitterIcon,
-} from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
 
 const company = [
   { title: "Om oss", href: "#" },
@@ -21,11 +15,11 @@ const resources = [
 ];
 
 const socialLinks = [
-  { icon: <FacebookIcon className="size-4" />, href: "#" },
-  { icon: <GithubIcon className="size-4" />, href: "#" },
-  { icon: <InstagramIcon className="size-4" />, href: "#" },
-  { icon: <LinkedinIcon className="size-4" />, href: "#" },
-  { icon: <TwitterIcon className="size-4" />, href: "#" },
+  { icon: <Facebook className="size-4" />, href: "#" },
+  { icon: <Github className="size-4" />, href: "#" },
+  { icon: <Instagram className="size-4" />, href: "#" },
+  { icon: <Linkedin className="size-4" />, href: "#" },
+  { icon: <Twitter className="size-4" />, href: "#" },
 ];
 
 export function MinimalFooter() {
