@@ -315,7 +315,7 @@ function HeroMonochromeLaunch() {
   };
 
   return (
-    <div className={`relative isolate overflow-hidden transition-colors duration-700 ${palette.surface}`}>
+    <div className={`relative isolate transition-colors duration-700 ${palette.surface}`}>
       <div
         className="pointer-events-none absolute inset-0 -z-20"
         style={{ backgroundColor: palette.background.color }}
@@ -324,10 +324,20 @@ function HeroMonochromeLaunch() {
         className="pointer-events-none absolute inset-0 -z-10 opacity-80"
         style={{ backgroundImage: palette.background.dots, backgroundSize: "12px 12px" }}
       />
+      <svg
+        className="pointer-events-none absolute inset-0 h-full w-full"
+        style={{ zIndex: 20 }}
+        aria-hidden
+      >
+        <rect x="0" y="0" width="100%" height="100%" rx="0" ry="0" fill="none"
+          stroke="rgba(255,255,255,0.25)" strokeWidth="1" strokeDasharray="8 6">
+          <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="3s" repeatCount="indefinite" />
+        </rect>
+      </svg>
 
       <section
         ref={sectionRef}
-        className={`relative mx-auto flex w-full max-w-6xl flex-col gap-14 px-6 py-32 transition-opacity duration-700 md:gap-16 lg:px-12 ${
+        className={`relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-20 transition-opacity duration-700 lg:px-12 ${
           visible ? "motion-safe:animate-[hero1-intro_1s_cubic-bezier(.25,.9,.3,1)_forwards]" : "opacity-0"
         }`}
       >
@@ -338,16 +348,6 @@ function HeroMonochromeLaunch() {
           enableRipples={false} enableGradient={true}
           gradientColor1="#FF0000" gradientColor2="#0810FF" opacity={1}
         />
-        <svg
-          className="pointer-events-none absolute inset-0 h-full w-full"
-          style={{ zIndex: 20 }}
-          aria-hidden
-        >
-          <rect x="0" y="0" width="100%" height="100%" rx="0" ry="0" fill="none"
-            stroke="rgba(255,255,255,0.25)" strokeWidth="1" strokeDasharray="8 6">
-            <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="3s" repeatCount="indefinite" />
-          </rect>
-        </svg>
         <header className="relative z-10 flex flex-col items-center gap-10 text-center">
           <div className="space-y-5">
             <div className="flex items-center justify-center gap-4 text-xs uppercase tracking-[0.4em]">
