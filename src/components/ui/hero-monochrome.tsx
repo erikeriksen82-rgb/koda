@@ -325,27 +325,6 @@ function HeroMonochromeLaunch() {
         style={{ backgroundImage: palette.background.dots, backgroundSize: "12px 12px" }}
       />
 
-      <header className="relative z-20 w-full">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 lg:px-12">
-          <img
-            src="/logo.png"
-            alt="LeanTech"
-            className="h-40 w-auto"
-            style={{ marginTop: "-48px", marginBottom: "-48px" }}
-          />
-          <div className="flex items-center gap-3">
-            <a href="#" className="text-sm text-white/60 transition hover:text-white">Kontakt</a>
-            <a
-              href="#"
-              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2 text-sm font-medium transition duration-500 hover:translate-y-[-2px] ${palette.border}`}
-            >
-              Kom i gang
-              <span aria-hidden className="text-base">↗</span>
-            </a>
-          </div>
-        </div>
-      </header>
-
       <section
         ref={sectionRef}
         className={`relative mx-auto flex w-full max-w-6xl flex-col gap-14 overflow-hidden px-6 py-32 transition-opacity duration-700 md:gap-16 lg:px-12 ${
@@ -369,9 +348,9 @@ function HeroMonochromeLaunch() {
           enableRipples={false} enableGradient={true}
           gradientColor1="#FF0000" gradientColor2="#0810FF" opacity={1}
         />
-        <header className="relative z-10 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+        <header className="relative z-10 flex flex-col items-center gap-10 text-center">
           <div className="space-y-5">
-            <div className="flex items-center gap-4 text-xs uppercase tracking-[0.4em]">
+            <div className="flex items-center justify-center gap-4 text-xs uppercase tracking-[0.4em]">
               <span className={`rounded-full border px-4 py-1 ${palette.border} ${palette.accent}`}>Lean Tech</span>
               <span className={palette.subtle}>AI / Automasjon</span>
             </div>
@@ -382,11 +361,11 @@ function HeroMonochromeLaunch() {
                   presisjon og kontroll.
                 </span>
               </h1>
-              <p className={`max-w-2xl text-base md:text-lg ${palette.subtle}`}>
+              <p className={`mx-auto max-w-2xl text-base md:text-lg ${palette.subtle}`}>
                 Bygget for bedrifter som krever effektiv drift: vi kartlegger prosesser, kobler systemer og automatiserer arbeidsflyt som reduserer manuelt arbeid og skalerer naturlig på tvers av virksomheten.
               </p>
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <button type="button" onClick={toggleTheme}
                 className={`group inline-flex items-center gap-3 rounded-full border px-6 py-3 text-sm font-medium transition duration-500 ${palette.border} ${palette.accent}`}>
                 <span className="relative flex h-6 w-6 items-center justify-center">
@@ -396,7 +375,7 @@ function HeroMonochromeLaunch() {
                 {theme === "dark" ? "Aktiver lysmodus" : "Aktiver mørk modus"}
               </button>
               <a href="#"
-                className={`inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium transition duration-500 sm:ml-4 ${palette.border} hover:translate-y-[-2px]`}>
+                className={`inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium transition duration-500 ${palette.border} hover:translate-y-[-2px]`}>
                 Se løsninger
                 <span aria-hidden className="text-lg">↗</span>
               </a>
