@@ -321,8 +321,16 @@ function HeroMonochromeLaunch() {
         style={{ backgroundColor: palette.background.color }}
       />
       <div
-        className="pointer-events-none absolute inset-0 -z-10 opacity-80"
+        className="pointer-events-none absolute inset-0 -z-10"
         style={{ backgroundImage: palette.background.dots, backgroundSize: "12px 12px" }}
+      />
+      <div
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background: theme === "dark"
+            ? "radial-gradient(ellipse 90% 70% at 50% -10%, rgba(99,102,241,0.35), transparent 65%), radial-gradient(ellipse 60% 50% at 85% 90%, rgba(168,85,247,0.25), transparent 65%)"
+            : "radial-gradient(ellipse 90% 70% at 50% -10%, rgba(99,102,241,0.12), transparent 65%), radial-gradient(ellipse 60% 50% at 85% 90%, rgba(168,85,247,0.08), transparent 65%)"
+        }}
       />
 
       <section
@@ -341,8 +349,6 @@ function HeroMonochromeLaunch() {
             <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="3s" repeatCount="indefinite" />
           </rect>
         </svg>
-        {/* Gradient bakgrunn — erstatter DitherShader for kryssplattform-kompatibilitet */}
-        <div className="pointer-events-none absolute inset-0" style={{ zIndex: 0, background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99,102,241,0.18), transparent 70%), radial-gradient(ellipse 60% 40% at 80% 80%, rgba(168,85,247,0.12), transparent 70%)" }} />
         <header className="relative z-10 flex flex-col items-center gap-10 text-center">
           <div className="space-y-5">
             <div className="flex items-center justify-center gap-4 text-xs uppercase tracking-[0.4em]">
