@@ -4,6 +4,7 @@ import { BentoGrid01 } from "@/components/ui/bento-grid-01";
 import { BentoMonochrome1 } from "@/components/ui/bento-monochrome-1";
 import { RuixenBentoCards } from "@/components/ui/ruixen-bento-cards";
 import { AnimatedNavFramer } from "@/components/ui/navigation-menu";
+import { MinimalFooter } from "@/components/ui/minimal-footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <BentoGrid01 />
         <BentoMonochrome1 />
         <RuixenBentoCards />
+        <MinimalFooter />
       </main>
     </>
   );
