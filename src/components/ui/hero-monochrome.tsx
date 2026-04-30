@@ -315,7 +315,7 @@ function HeroMonochromeLaunch() {
   };
 
   return (
-    <div className={`relative isolate min-h-screen overflow-hidden transition-colors duration-700 ${palette.surface}`}>
+    <div className={`relative isolate overflow-hidden transition-colors duration-700 ${palette.surface}`}>
       <div
         className="pointer-events-none absolute inset-0 -z-20"
         style={{ backgroundColor: palette.background.color }}
@@ -341,13 +341,8 @@ function HeroMonochromeLaunch() {
             <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="3s" repeatCount="indefinite" />
           </rect>
         </svg>
-        <DitherShader
-          className="absolute inset-0"
-          style={{ zIndex: 0 }}
-          variant="circle" pixelSize={3} patternDensity={2} speed={0.1}
-          enableRipples={false} enableGradient={true}
-          gradientColor1="#FF0000" gradientColor2="#0810FF" opacity={1}
-        />
+        {/* Gradient bakgrunn — erstatter DitherShader for kryssplattform-kompatibilitet */}
+        <div className="pointer-events-none absolute inset-0" style={{ zIndex: 0, background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99,102,241,0.18), transparent 70%), radial-gradient(ellipse 60% 40% at 80% 80%, rgba(168,85,247,0.12), transparent 70%)" }} />
         <header className="relative z-10 flex flex-col items-center gap-10 text-center">
           <div className="space-y-5">
             <div className="flex items-center justify-center gap-4 text-xs uppercase tracking-[0.4em]">
